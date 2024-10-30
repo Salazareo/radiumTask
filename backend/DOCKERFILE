@@ -1,0 +1,8 @@
+FROM node:21-alpine3.19
+WORKDIR .
+COPY package.json .
+COPY nodemon.json .
+COPY tsconfig.json .
+RUN yarn
+COPY src ./src
+EXPOSE 8080
